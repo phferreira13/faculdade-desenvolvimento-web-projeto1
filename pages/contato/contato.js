@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!valor.trim()) {
       return 'O campo Email de contato é obrigatório.';
     }
-    const emailRegex = /^[\s@]+@[\s@]+\.[\s@]+$/;
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (!emailRegex.test(valor.trim())) {
       return 'Por favor, insira um e-mail válido.';
     }
